@@ -16,6 +16,26 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <developers>
+        <developer>
+            <email>test</email>
+            <name>rex89m</name>
+            <url>https://github.com/IceGame-pl</url>
+            <id>ApiInventory</id>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>scm:git:git@github.com:IceGame-pl/ApiInventory.git</url>
+        <connection>scm:git:git@github.com:IceGame-pl/ApiInventory.git</connection>
+        <developerConnection>scm:git:git@github.com:IceGame-pl/ApiInventory.git</developerConnection>
+    </scm>
+
+    <issueManagement>
+        <url>https://github.com/IceGame-pl/ApiInventory/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
     <build>
         <plugins>
             <plugin>
