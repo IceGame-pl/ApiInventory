@@ -4,12 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>pl.rex89m</groupId>
-    <artifactId>api-Inventory</artifactId>
+    <groupId>com.github.IceGame-pl</groupId>
+    <artifactId>ApiInventory</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Api Inventory</name>
+    <name>Minecraft api</name>
+    <url>https://github.com/IceGame-pl/ApiInventory</url>
+    <description>A Java wrapper of the TeamSpeak 3 Server Query API</description>
 
     <properties>
         <java.version>1.8</java.version>

@@ -10,11 +10,9 @@ public class ApiInventory extends JavaPlugin implements Listener {
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this,this);
     }
-
     @Override
     public void onDisable() {
     }
-
     @EventHandler
     public void onClickInventory(InventoryClickEvent e){
         if (CreateInventory.lista.containsKey(e.getCurrentItem())){
