@@ -15,8 +15,10 @@ public class ApiInventory extends JavaPlugin implements Listener {
     }
     @EventHandler
     public void onClickInventory(InventoryClickEvent e){
-        if (CreateInventory.lista.containsKey(e.getCurrentItem())){
-            CreateInventory.lista.get(e.getCurrentItem()).onClick();
+        if (CreateInventory.lista.containsKey(e.getWhoClicked().getOpenInventory().getTitle())){
+            if (CreateInventory.lista.get(e.getWhoClicked().getOpenInventory().getTitle()).containsKey(e.getRawSlot())){
+                CreateInventory.lista.get(e.getWhoClicked().getOpenInventory().getTitle()).get(e.getRawSlot()).onClick(e);
+            }
         }
     }
 }

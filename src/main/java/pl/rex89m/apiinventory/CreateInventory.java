@@ -22,31 +22,41 @@ public class CreateInventory implements Inventory {
     public Inventory getInventory(){
         return inventory;
     }
+    private String name;
 
     public CreateInventory(){
         inventory = Bukkit.createInventory(null, 9);
+        name = "Chest";
     }
     public CreateInventory(String nazwa){
         inventory = Bukkit.createInventory(null, 9, nazwa);
+        this.name=nazwa;
     }
     public CreateInventory(Integer integer, String nazwa){
         inventory = Bukkit.createInventory(null, integer, nazwa);
+        this.name=nazwa;
     }
     public CreateInventory(Player p, Integer integer, String nazwa){
         inventory = Bukkit.createInventory(p, integer, nazwa);
+        this.name=nazwa;
     }
 
-    public static HashMap<ItemStack, OnClickListener> lista = new HashMap<>();
+    public static HashMap<String, HashMap<Integer, OnClickListener>> lista = new HashMap<>();
 
     public void setItemClick(Integer integer, ItemStack item, OnClickListener listener){
         inventory.setItem(integer, item);
-        lista.put(item, listener);
+        HashMap<Integer, OnClickListener> hashMap = new HashMap<>();
+        lista.put(name, hashMap);
     }
 
+    public String getName() {
+        return this.name;
+    }
     @Override
     public int getSize() {
         return inventory.getSize();
     }
+
 
     @Override
     public int getMaxStackSize() {

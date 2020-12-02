@@ -4,39 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.IceGame-pl</groupId>
-    <artifactId>ApiInventory</artifactId>
+    <groupId>pl.rex89m</groupId>
+    <artifactId>api-Inventory</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Minecraft api</name>
-    <url>https://github.com/IceGame-pl/ApiInventory</url>
-    <description>A Java wrapper of the TeamSpeak 3 Server Query API</description>
+    <name>Api Inventory</name>
 
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <developers>
-        <developer>
-            <email>test</email>
-            <name>rex89m</name>
-            <url>https://github.com/IceGame-pl</url>
-            <id>ApiInventory</id>
-        </developer>
-    </developers>
-
-    <scm>
-        <url>scm:git:git@github.com:IceGame-pl/ApiInventory.git</url>
-        <connection>scm:git:git@github.com:IceGame-pl/ApiInventory.git</connection>
-        <developerConnection>scm:git:git@github.com:IceGame-pl/ApiInventory.git</developerConnection>
-    </scm>
-
-    <issueManagement>
-        <url>https://github.com/IceGame-pl/ApiInventory/issues</url>
-        <system>GitHub Issues</system>
-    </issueManagement>
 
     <build>
         <plugins>
