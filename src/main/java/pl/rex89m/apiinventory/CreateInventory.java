@@ -16,7 +16,6 @@ import java.util.ListIterator;
 
 public class CreateInventory implements Inventory {
 
-
     private Inventory inventory;
 
     public Inventory getInventory(){
@@ -46,6 +45,12 @@ public class CreateInventory implements Inventory {
     public void setItemClick(Integer integer, ItemStack item, OnClickListener listener){
         inventory.setItem(integer, item);
         HashMap<Integer, OnClickListener> hashMap = new HashMap<>();
+        hashMap.put(integer, listener);
+        lista.put(name, hashMap);
+    }
+    public void addClick(Integer integer, OnClickListener listener){
+        HashMap<Integer, OnClickListener> hashMap = new HashMap<>();
+        hashMap.put(integer, listener);
         lista.put(name, hashMap);
     }
 
@@ -56,7 +61,6 @@ public class CreateInventory implements Inventory {
     public int getSize() {
         return inventory.getSize();
     }
-
 
     @Override
     public int getMaxStackSize() {
