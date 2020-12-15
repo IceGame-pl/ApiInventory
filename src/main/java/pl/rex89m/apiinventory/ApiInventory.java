@@ -3,6 +3,7 @@ package pl.rex89m.apiinventory;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class ApiInventory extends JavaPlugin implements Listener {
@@ -19,6 +20,13 @@ public class ApiInventory extends JavaPlugin implements Listener {
             if (CreateInventory.lista.get(e.getWhoClicked().getOpenInventory().getTitle()).containsKey(e.getRawSlot())){
                 CreateInventory.lista.get(e.getWhoClicked().getOpenInventory().getTitle()).get(e.getRawSlot()).onClick(e);
             }
+        }
+    }
+
+    @EventHandler
+    public void onClickInventory(InventoryCloseEvent e){
+        if (CreateInventory.closeinventory.containsKey(e.getPlayer().getOpenInventory().getTitle())){
+            CreateInventory.closeinventory.get(e.getPlayer().getOpenInventory().getTitle()).onClosed(e);
         }
     }
 }

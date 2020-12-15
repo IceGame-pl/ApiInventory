@@ -1,8 +1,5 @@
 name: ApiInventory
 version: ${project.version}
 main: pl.rex89m.apiinventory.ApiInventory
-api-version: 1.15
+api-version: 1.12
 authors: [ rex89m ]
-commands:
-  test:
-  test2:
