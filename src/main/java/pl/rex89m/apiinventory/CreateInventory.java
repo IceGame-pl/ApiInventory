@@ -17,7 +17,6 @@ public class CreateInventory implements Inventory {
     private Inventory inventory;
     static HashMap<String, HashMap<Integer, OnClickListener>> lista = new HashMap<>();
     static HashMap<String, OnCloseInventory> closeinventory = new HashMap<>();
-
     private String name;
     private Integer sloty;
     private HashMap<Integer, OnClickListener> hashMap = new HashMap<>();
