@@ -127,11 +127,6 @@ public class CreateInventory implements Inventory {
     }
 
     @Override
-    public boolean contains(int materialId) {
-        return this.inventory.contains(materialId);
-    }
-
-    @Override
     public boolean contains(Material material){
         return this.inventory.contains(material);
     }
@@ -139,11 +134,6 @@ public class CreateInventory implements Inventory {
     @Override
     public boolean contains(ItemStack item) {
         return this.inventory.contains(item);
-    }
-
-    @Override
-    public boolean contains(int materialId, int amount) {
-        return this.inventory.contains(materialId, amount);
     }
 
     @Override
@@ -162,11 +152,6 @@ public class CreateInventory implements Inventory {
     }
 
     @Override
-    public HashMap<Integer, ? extends ItemStack> all(int materialId) {
-        return this.inventory.all(materialId);
-    }
-
-    @Override
     public HashMap<Integer, ? extends ItemStack> all(Material material){
         return this.inventory.all(material);
     }
@@ -174,11 +159,6 @@ public class CreateInventory implements Inventory {
     @Override
     public HashMap<Integer, ? extends ItemStack> all(ItemStack item) {
         return this.inventory.all(item);
-    }
-
-    @Override
-    public int first(int materialId) {
-        return this.inventory.first(materialId);
     }
 
     @Override
@@ -194,11 +174,6 @@ public class CreateInventory implements Inventory {
     @Override
     public int firstEmpty() {
         return this.inventory.firstEmpty();
-    }
-
-    @Override
-    public void remove(int materialId) {
-        this.inventory.remove(materialId);
     }
 
     @Override
@@ -224,11 +199,6 @@ public class CreateInventory implements Inventory {
     @Override
     public List<HumanEntity> getViewers() {
         return this.inventory.getViewers();
-    }
-
-    @Override
-    public String getTitle() {
-        return this.inventory.getTitle();
     }
 
     @Override
