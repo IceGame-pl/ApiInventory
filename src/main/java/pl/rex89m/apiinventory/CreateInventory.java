@@ -1,7 +1,6 @@
 package pl.rex89m.apiinventory;
 
 import org.bukkit.Bukkit;
-import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
@@ -54,7 +53,7 @@ public class CreateInventory implements Inventory {
         if (this.sloty>=integer) {
             this.inventory.setItem(integer, item);
             hashMap.put(integer, listener);
-            this.lista.put(name, hashMap);
+            lista.put(name, hashMap);
         }else{
             throw new NumberFormatException(this.sloty + " >= "+ integer);
         }
@@ -66,7 +65,7 @@ public class CreateInventory implements Inventory {
 
     public void addClick(Integer integer, OnClickListener listener){
         hashMap.put(integer, listener);
-        this.lista.put(name, hashMap);
+        lista.put(name, hashMap);
     }
     public String getName() {
         return this.name;
@@ -117,16 +116,6 @@ public class CreateInventory implements Inventory {
     }
 
     @Override
-    public ItemStack[] getStorageContents() {
-        return this.inventory.getStorageContents();
-    }
-
-    @Override
-    public void setStorageContents(ItemStack[] items){
-        this.inventory.setStorageContents(items);
-    }
-
-    @Override
     public boolean contains(int materialId) {
         return this.inventory.contains(materialId);
     }
@@ -143,7 +132,7 @@ public class CreateInventory implements Inventory {
 
     @Override
     public boolean contains(int materialId, int amount) {
-        return false;
+        return this.inventory.contains(materialId, amount);
     }
 
     @Override
@@ -163,7 +152,7 @@ public class CreateInventory implements Inventory {
 
     @Override
     public HashMap<Integer, ? extends ItemStack> all(int materialId) {
-        return null;
+        return this.inventory.all(materialId);
     }
 
     @Override
@@ -178,7 +167,7 @@ public class CreateInventory implements Inventory {
 
     @Override
     public int first(int materialId) {
-        return 0;
+        return this.inventory.first(materialId);
     }
 
     @Override
@@ -198,7 +187,7 @@ public class CreateInventory implements Inventory {
 
     @Override
     public void remove(int materialId) {
-
+        this.inventory.remove(materialId);
     }
 
     @Override
@@ -251,8 +240,4 @@ public class CreateInventory implements Inventory {
         return this.inventory.iterator(index);
     }
 
-    @Override
-    public Location getLocation() {
-        return this.inventory.getLocation();
-    }
 }
