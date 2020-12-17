@@ -1,6 +1,7 @@
 package pl.rex89m.apiinventory;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
@@ -113,6 +114,16 @@ public class CreateInventory implements Inventory {
     @Override
     public void setContents(ItemStack[] items) {
         this.inventory.setContents(items);
+    }
+
+    @Override
+    public ItemStack[] getStorageContents() {
+        return this.inventory.getStorageContents();
+    }
+
+    @Override
+    public void setStorageContents(ItemStack[] items) {
+        this.inventory.setStorageContents(items);
     }
 
     @Override
@@ -238,6 +249,11 @@ public class CreateInventory implements Inventory {
     @Override
     public ListIterator<ItemStack> iterator(int index) {
         return this.inventory.iterator(index);
+    }
+
+    @Override
+    public Location getLocation() {
+        return this.inventory.getLocation();
     }
 
 }
